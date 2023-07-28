@@ -1,15 +1,24 @@
 package com.zartre.hexatodo.SpringApp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 @Data
-@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class TodoItem {
-    /**
-     * id is generated at service level when creating a new to-do item
-     */
-    private String id;
+    private @Id @GeneratedValue Long id;
     private String title;
-    private TodoStatus status;
+    @Builder.Default
+    private TodoStatus status = TodoStatus.OPEN;
+
+    public TodoItem() {
+        status = TodoStatus.OPEN;
+    }
 }
