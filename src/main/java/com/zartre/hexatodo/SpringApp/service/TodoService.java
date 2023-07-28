@@ -7,5 +7,4 @@ public interface TodoService {
     TodoItem createTodo(TodoItem item);
     void deleteTodo(String id);
     void changeTodoStatus(String id, TodoStatus status);
-    TodoItem getTodo(String id);
 }
