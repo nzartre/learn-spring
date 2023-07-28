@@ -14,8 +14,8 @@ public class TodoController implements Handler {
     private TodoService todoService;
 
     @PostMapping("/todos")
-    public void createTodo(@RequestBody TodoItem item) {
+    public TodoItem createTodo(@RequestBody TodoItem item) {
         System.out.println("HttpHandler.createTodo");
-        todoService.createTodo(item);
+        return todoService.createTodo(item);
     }
 }

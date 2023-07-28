@@ -12,9 +12,8 @@ public class TodoServiceImpl implements TodoService {
     private MainDB db;
 
     @Override
-    public void createTodo(TodoItem item) {
-        item.setId("1");
-        this.db.todoDB.create(item);
+    public TodoItem createTodo(TodoItem item) {
+        return this.db.todoDB.create(item);
     }
 
     @Override
@@ -25,7 +24,7 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public void changeTodoStatus(String id, TodoStatus status) {
         TodoItem item = new TodoItem();
-        item.setId(id);
+//        item.setId(id);
         item.setStatus(status);
         this.db.todoDB.update(item);
     }

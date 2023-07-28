@@ -4,5 +4,5 @@ import com.zartre.hexatodo.SpringApp.model.TodoItem;
 import org.springframework.web.bind.annotation.RequestBody;
 
 public interface Handler {
-    void createTodo(@RequestBody TodoItem item);
+    TodoItem createTodo(@RequestBody TodoItem item);
 }
