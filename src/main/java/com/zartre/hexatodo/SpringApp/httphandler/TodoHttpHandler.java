@@ -17,7 +17,7 @@ public class TodoHttpHandler implements TodoHandler {
     @Autowired
     private TodoService todoService;
 
-    private Logger logger = LoggerFactory.getLogger(TodoHttpHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(TodoHttpHandler.class);
 
     @PostMapping
     public TodoItem createTodo(@RequestBody TodoItem item) {
