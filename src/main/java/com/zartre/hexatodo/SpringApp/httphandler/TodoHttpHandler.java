@@ -1,4 +1,4 @@
-package com.zartre.hexatodo.SpringApp.handler_http;
+package com.zartre.hexatodo.SpringApp.httphandler;
 
 import com.zartre.hexatodo.SpringApp.model.TodoItem;
 import com.zartre.hexatodo.SpringApp.handler.TodoHandler;
