@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/todos")
-public class TodoController implements TodoHandler {
+public class TodoHttpHandler implements TodoHandler {
     @Autowired
     private TodoService todoService;
 
-    private Logger logger = LoggerFactory.getLogger(TodoController.class);
+    private Logger logger = LoggerFactory.getLogger(TodoHttpHandler.class);
 
     @PostMapping
     public TodoItem createTodo(@RequestBody TodoItem item) {
