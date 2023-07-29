@@ -23,4 +23,10 @@ public class TodoHttpHandler implements TodoHandler {
         logger.info(String.format("createTodo with body %s", item.toString()));
         return todoService.createTodo(item);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteTodo(@PathVariable Long id) {
+        logger.info(String.format("deleteTodo id: %s", id));
+        todoService.deleteTodo(id);
+    }
 }

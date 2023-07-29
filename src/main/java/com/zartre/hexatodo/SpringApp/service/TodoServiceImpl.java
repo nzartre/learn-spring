@@ -16,4 +16,9 @@ public class TodoServiceImpl implements TodoService {
     public TodoItem createTodo(TodoItem item) {
         return todoDB.save(item);
     }
+
+    @Override
+    public void deleteTodo(Long id) {
+        todoDB.deleteById(id);
+    }
 }
