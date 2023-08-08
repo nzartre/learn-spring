@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * TodoDB is a driven port for a to-do database
  */
-public interface TodoDB extends JpaRepository<TodoItem, Long> {
+public interface TodoDB extends JpaRepository<TodoItem, String> {
 }

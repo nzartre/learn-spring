@@ -18,7 +18,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public void deleteTodo(Long id) throws NotFoundException {
+    public void deleteTodo(String id) throws NotFoundException {
         try {
             todoDB.deleteById(id);
         } catch (EmptyResultDataAccessException e) {

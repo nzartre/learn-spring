@@ -27,7 +27,7 @@ public class TodoHttpHandler implements TodoHandler {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTodo(@PathVariable Long id) {
+    public void deleteTodo(@PathVariable String id) {
         logger.info(String.format("deleteTodo id: %s", id));
         try {
             todoService.deleteTodo(id);

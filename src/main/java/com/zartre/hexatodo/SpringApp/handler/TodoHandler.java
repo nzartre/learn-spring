@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface TodoHandler {
     TodoItem createTodo(@RequestBody TodoItem item);
-    void deleteTodo(@PathVariable Long id);
+    void deleteTodo(@PathVariable String id);
 }

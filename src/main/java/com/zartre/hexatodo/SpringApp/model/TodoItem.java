@@ -4,21 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 public class TodoItem {
-    private @Id @GeneratedValue Long id;
+    @Id
+    private String id;
+
     private String title;
     @Builder.Default
     private TodoStatus status = TodoStatus.OPEN;
 
     public TodoItem() {
+        id = UUID.randomUUID().toString();
         status = TodoStatus.OPEN;
     }
 }

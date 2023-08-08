@@ -5,5 +5,5 @@ import com.zartre.hexatodo.SpringApp.model.TodoItem;
 
 public interface TodoService {
     TodoItem createTodo(TodoItem item);
-    void deleteTodo(Long id) throws NotFoundException;
+    void deleteTodo(String id) throws NotFoundException;
 }
