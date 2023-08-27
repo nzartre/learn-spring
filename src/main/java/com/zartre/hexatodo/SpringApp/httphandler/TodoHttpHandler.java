@@ -26,6 +26,15 @@ public class TodoHttpHandler implements TodoHandler {
         return todoService.createTodo(item);
     }
 
+    @GetMapping("/{id}")
+    public TodoItem getTodo(@PathVariable String id) {
+        try {
+            return todoService.getTodo(id);
+        } catch (NotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @DeleteMapping("/{id}")
     public void deleteTodo(@PathVariable String id) {
         logger.info(String.format("deleteTodo id: %s", id));
