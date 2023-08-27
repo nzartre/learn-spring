@@ -17,6 +17,8 @@ public class TodoItem {
     private String id;
 
     private String title;
+
+    @Enumerated(EnumType.STRING)
     @Builder.Default
     private TodoStatus status = TodoStatus.OPEN;
 
