@@ -11,6 +11,7 @@ import java.util.UUID;
 @Data
 @Builder
 @AllArgsConstructor
+@Table(name = "todo_items")
 public class TodoItem {
     @Id
     private String id;
